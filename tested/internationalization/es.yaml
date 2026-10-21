@@ -64,6 +64,9 @@ es:
       memory-limit: "Límite de memoria excedido"
       not-executed: "Esta(s) prueba(s) no se ejecutaron"
       missing: "Resultado faltante"
+      recovered:
+        stdout: "La salida estándar fue:\n%{output}"
+        stderr: "El error estándar fue:\n%{output}"
       files:
         zero: "Sin archivos"
         one: "Archivo: %{files}"

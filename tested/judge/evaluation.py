@@ -237,12 +237,16 @@ def evaluate_context_results(
                 )
             )
         )
-        # Recover stdout and stderr if present.
+        # Recover stdout and stderr if present. The labels follow the
+        # submission's natural language, like every other message (#745).
         if recovered := "\n".join(stdout_):
             missing_values.append(
                 AppendMessage(
                     message=ExtendedMessage(
-                        description="Standaarduitvoer was:\n" + recovered, format="code"
+                        description=get_i18n_string(
+                            "judge.evaluation.recovered.stdout", output=recovered
+                        ),
+                        format="code",
                     )
                 )
             )
@@ -250,7 +254,10 @@ def evaluate_context_results(
             missing_values.append(
                 AppendMessage(
                     message=ExtendedMessage(
-                        description="Standaardfout was:\n" + recovered, format="code"
+                        description=get_i18n_string(
+                            "judge.evaluation.recovered.stderr", output=recovered
+                        ),
+                        format="code",
                     )
                 )
             )

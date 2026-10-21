@@ -64,6 +64,9 @@ nl:
       memory-limit: "Geheugenlimiet overschreden"
       not-executed: "Deze test(en) werden niet uitgevoerd"
       missing: "Ontbrekend resultaat"
+      recovered:
+        stdout: "Standaarduitvoer was:\n%{output}"
+        stderr: "Standaardfout was:\n%{output}"
       files:
         zero: "Geen bestanden"
         one: "Bestand: %{files}"

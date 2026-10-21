@@ -64,6 +64,9 @@ en:
       memory-limit: "Memory limit exceeded"
       not-executed: "These test(s) were not executed"
       missing: "Missing result"
+      recovered:
+        stdout: "Standard output was:\n%{output}"
+        stderr: "Standard error was:\n%{output}"
       files:
         zero: "No files"
         one: "File: %{files}"
